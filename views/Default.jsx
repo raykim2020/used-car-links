@@ -1,5 +1,5 @@
 const React = require('react');
-
+const Filter = require('./cars/Filter.jsx')
 class DefaultLayout extends React.Component {
     render() {
         return (
@@ -14,10 +14,11 @@ class DefaultLayout extends React.Component {
                         <h1>Used Car Links</h1>
                         <nav>
                             <ul>
-                                <li>Home</li>
+                                <li><a href="">Home</a></li>
                                 <li>About</li>
                                 <li>Contact</li>
                             </ul>
+                            <Filter />
                         </nav>
                     </header>
                     <div className="color">

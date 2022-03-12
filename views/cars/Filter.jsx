@@ -3,14 +3,20 @@ const DefaultLayout = require('../Default.jsx')
 class Filter extends React.Component {
     render() {
         return (
-            <DefaultLayout>
-                <form action="/cars" method="GET">
-                    <fieldset>
-                        <legend>Add a New Listing</legend>
-                        <label>
-                            MAKE:<input type="text" name="make" placeholder="filter by make" />
-                        </label>
-                        <label>
+            <div>
+                <form action="/cars/searchBy" method="POST">
+
+                    {/* <legend>Add a New Listing</legend> */}
+                    {/* <label> */}
+                    <select id="cars" name="searchoptions">
+                        <option value="make">Make</option>
+                        <option value="model">Model</option>
+                        <option value="year">Year</option>
+                        <option value="price">Price</option>
+                    </select>
+                    <input type="text" name="filter" placeholder="Keywords" />
+                    {/* </label> */}
+                    {/* <label>
                             MODEL:<input type="text" name="model" placeholder="filter by model" />
                         </label>
                         <label>
@@ -18,11 +24,12 @@ class Filter extends React.Component {
                         </label>
                         <label>
                             PRICE:<input type="text" name="price" placeholder="filter by price" />
-                        </label>
-                    </fieldset>
+                        </label> */}
+
                     <input type="submit" value="filters" />
                 </form>
-            </DefaultLayout>
+            </div>
         )
     }
 }
+module.exports = Filter;

@@ -75,8 +75,22 @@ router.get('/:id/edit', (req, res) => {
         })
 })
 //Search by make
-router.get("/searchBy/make/:make", (req, res) => {
-    Car.find({ make: req.params.make })
+// router.get("/searchBy/make/:make", (req, res) => {
+//     Car.find({ make: req.params.make })
+
+//         .then((cars) => {
+//             res.render("cars/Index", { cars });
+//         })
+//         .catch((error) => {
+//             res.status(400).json({ error })
+//         })
+// })
+
+router.get("/searchBy/:filter/:value", (req, res) => {
+    const { filter, value } = req.params
+    // const filter = req.params.filter
+    // const value = req.params.value
+    Car.find({ [filter]: value })
 
         .then((cars) => {
             res.render("cars/Index", { cars });
@@ -88,8 +102,20 @@ router.get("/searchBy/make/:make", (req, res) => {
 
 //router post
 
-router.post("/searchBy/:type", (req, res) => {
-    res.redirect(`/searchBy/${req.params.type}/${req.body.make}`)
+router.post("/searchBy", (req, res) => {
+    // console.log(req.body)
+    const key = req.body.searchoptions
+    // console.log(key)
+    Car.findOne({ key: req.body.filter })
+        .then((cars) => {
+            // res.render("cars/Index", { cars });
+            // res.send(cars)
+            res.redirect(`searchBy/${key}/${req.body.filter}`)
+        })
+        .catch((error) => {
+            res.status(400).json(error)
+        })
+    // res.send(req.body)
 })
 
 // Show
