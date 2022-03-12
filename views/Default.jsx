@@ -14,9 +14,9 @@ class DefaultLayout extends React.Component {
                         <h1>Used Car Links</h1>
                         <nav>
                             <ul>
-                                <li><a href="">Home</a></li>
-                                <li>About</li>
-                                <li>Contact</li>
+                                <li><a href="/cars">Home</a></li>
+                                <li><a href="/cars/about">About</a></li>
+                                <li><a href="/cars/contact">Contact</a></li>
                             </ul>
                             <Filter />
                         </nav>

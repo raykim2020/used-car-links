@@ -10,23 +10,57 @@ const Car = require("../models/car");
 /////////////////////////////////////////
 const router = express.Router();
 
+////////////////////////////////////////
+// Router Middleware
+////////////////////////////////////////
+// Authorization Middleware
+router.use((req, res, next) => {
+    if (req.session.loggedIn) {
+        console.log(req.session)
+        next();
+    } else {
+        res.redirect("/user/login");
+    }
+});
+
 ////////////////////////////////
 // Index
 ////////////////////////
-router.get("/", (req, res) => {
-    Car.find({})
 
+router.get("/", (req, res) => {
+    // find all the fruits
+    Car.find({})
+        // render a template after they are found
         .then((cars) => {
-            res.render("cars/Index", { cars });
+            console.log(cars);
+            res.render("cars/Index", { cars, });
         })
+        // send error as json if they aren't
         .catch((error) => {
-            res.status(400).json({ error })
-        })
-})
+            console.log(error);
+            res.json({ error });
+        });
+});
+// router.get("/", (req, res) => {
+//     Car.find({})
+
+//         .then((cars) => {
+//             res.render("cars/Index", { cars });
+//         })
+//         .catch((error) => {
+//             res.status(400).json({ error })
+//         })
+// })
 
 //new
 router.get('/new', (req, res) => {
     res.render('cars/New')
+})
+router.get('/about', (req, res) => {
+    res.render('nav/About')
+})
+router.get('/contact', (req, res) => {
+    res.render('nav/Contact')
 })
 //Delete
 router.delete('/:id', (req, res) => {
@@ -55,6 +89,7 @@ router.put('/:id', (req, res) => {
 router.post('/', (req, res) => {
     console.log('beginning', req.body)
     console.log('after', req.body)
+    req.body.username = req.session.username;
     Car.create(req.body)
         .then((createdCar) => {
             res.redirect(`/cars/${createdCar._id}`)

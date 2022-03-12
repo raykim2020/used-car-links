@@ -8,7 +8,8 @@ const carSchema = new Schema({
     model: String,
     year: String,
     price: String,
-    img: String
+    img: String,
+    username: String,
 })
 
 const Car = model("Car", carSchema)
