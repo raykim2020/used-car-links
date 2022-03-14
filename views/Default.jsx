@@ -11,14 +11,20 @@ class DefaultLayout extends React.Component {
                 </head>
                 <body>
                     <header>
-                        <h1>Used Car Links</h1>
+                        <div className="head">
+                            <h1>Used Car Links</h1>
+                        </div>
                         <nav>
                             <ul>
                                 <li><a href="/cars">Home</a></li>
                                 <li><a href="/cars/about">About</a></li>
                                 <li><a href="/cars/contact">Contact</a></li>
+                                <li>My Listings</li>
                             </ul>
-                            <Filter />
+                            <div>
+                                <a className="logout" href="/user/logout"><button>Logout</button></a>
+                                <Filter />
+                            </div>
                         </nav>
                     </header>
                     <div className="color">
