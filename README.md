@@ -1,0 +1,4 @@
+The site I decide to create was based on used car websites and sort of a facebook marketplace. The objective of this site is to connect car enthusiasts all around the world with used car listings and meetups for users. As we all know due to the chip shortages finding the right car ove the past months have been quite difficult and although there are sites with similar functions this site will be targeting people more knowledgable with cars and linknig them to people who may not know so much about what a good deal may be. There may be people trying to upload their own listings and pass off an absurd deal for a "great deal", but that is why in the future I want to implement a comment section so that these listings can be critiqued and checked by others. 
+
+When trying to first get onto the site people
+![](public/images/Login.png)
