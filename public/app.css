@@ -71,7 +71,7 @@ h1{
 .indeximg{
     display: block;
     height: 475px;
-    width: 70%;
+    width: 60%;
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -91,9 +91,11 @@ h1{
     display:flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    width: 70%;
-    height:fit-content;
+    height: fit-content;
+    width: 60%;
     align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 article{
     display: flex;
@@ -106,7 +108,7 @@ article{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 70%;
     height:fit-content;
     margin-left: auto;
     margin-right: auto;
