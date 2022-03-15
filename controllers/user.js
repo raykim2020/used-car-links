@@ -55,7 +55,7 @@ router.post("/login", async (req, res) => {
                 const result = await bcrypt.compare(password, user.password);
                 if (result) {
                     // redirect to fruits page if successful
-                    req.session.username = username;
+                    req.session.username = user.username;
                     req.session.loggedIn = true;
                     res.redirect("/cars",);
                 } else {

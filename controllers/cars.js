@@ -16,7 +16,7 @@ const router = express.Router();
 // Authorization Middleware
 router.use((req, res, next) => {
     if (req.session.loggedIn) {
-        console.log(req.session)
+        console.log(req.session.username)
         next();
     } else {
         res.redirect("/user/login");
@@ -40,6 +40,21 @@ router.get("/", (req, res) => {
             console.log(error);
             res.json({ error });
         });
+});
+router.get("/user", (req, res) => {
+    console.log("username", req.session.username)
+    Car.find({ username: req.session.username })
+        // render a template after they are found
+        .then((cars) => {
+            console.log(cars);
+            res.render("cars/Listing", { cars, });
+        })
+        // send error as json if they aren't
+        .catch((error) => {
+            console.log(error);
+            res.json({ error });
+        });
+
 });
 // router.get("/", (req, res) => {
 //     Car.find({})

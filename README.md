@@ -2,3 +2,17 @@ The site I decide to create was based on used car websites and sort of a faceboo
 
 When trying to first get onto the site people
 ![](public/images/Login.png)
+Users who already have an account can log in and anyone that would like to sign up can do so as well.
+
+
+Once logged in users will be brought to the home page
+![](public/images/home.png)
+Here users can see the global list of used cars that are on display and navigate through the website
+
+
+When a user navigates into about
+![](public/images/about.png)
+Users will get a summary of the websites objectives and goals. 
+
+Need Help?
+![](public/images/Login.png)

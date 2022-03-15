@@ -19,7 +19,7 @@ class DefaultLayout extends React.Component {
                                 <li><a href="/cars">Home</a></li>
                                 <li><a href="/cars/about">About</a></li>
                                 <li><a href="/cars/contact">Contact</a></li>
-                                <li>My Listings</li>
+                                <li><a href="/cars/user">My Listings</a></li>
                             </ul>
                             <div>
                                 <a className="logout" href="/user/logout"><button>Logout</button></a>
