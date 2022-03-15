@@ -6,6 +6,9 @@ body {
     flex-direction: column;
     align-items: center;
 }
+.logo{
+    width: 175px;
+}
 .color{
     width: 100%;
     /* display: flex;
