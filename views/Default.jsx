@@ -12,7 +12,7 @@ class DefaultLayout extends React.Component {
                 <body>
                     <header>
                         <div className="head">
-                            <img className="logo" src="images/logo.png" alt="" />
+                            <img className="logo" src="/images/logo.png" alt="" />
                         </div>
                         <nav>
                             <ul>

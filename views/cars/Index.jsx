@@ -5,7 +5,7 @@ class Index extends React.Component {
         const { cars } = this.props
         return (
             <DefaultLayout title="Used Car Links">
-                <div className="container">
+                <div className="contain">
                     <div>
                         <img className="indeximg" src="https://www.supercars.net/blog/wp-content/uploads/2020/09/wallpaperflare.com_wallpaper-1-1.jpg" alt="" />
                         <p className='indexdescription'>At Used Car Links we want to connect people with a database of used cars they may want to purchase. Our services are open to any <br />

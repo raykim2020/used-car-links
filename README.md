@@ -15,4 +15,13 @@ When a user navigates into about
 Users will get a summary of the websites objectives and goals. 
 
 Need Help?
-![](public/images/Login.png)
+![](public/images/contact.png)
+If users have any questions or need help with anything they can find our contact info here
+
+Listings
+![](public/images/listing.png)
+
+
+
+My Trello board:
+https://trello.com/b/e0fcZh8C/project-2
