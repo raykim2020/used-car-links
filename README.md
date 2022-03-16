@@ -1,4 +1,4 @@
-<h1>Technologies used:<h1>
+<h1>Technologies used:</h1>
   
 <li>Javascript</li>
 <li>Css</li>
