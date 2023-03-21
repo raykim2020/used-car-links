@@ -138,6 +138,8 @@ router.get('/:id/edit', (req, res) => {
 
 router.get("/searchBy/:filter/:value", (req, res) => {
     const { filter, value } = req.params
+    console.log(filter)
+    console.log(value)
     // const filter = req.params.filter
     // const value = req.params.value
     Car.find({ [filter]: value })
@@ -155,7 +157,6 @@ router.get("/searchBy/:filter/:value", (req, res) => {
 router.post("/searchBy", (req, res) => {
     // console.log(req.body)
     const key = req.body.searchoptions
-    // console.log(key)
     Car.findOne({ key: req.body.filter })
         .then((cars) => {
             // res.render("cars/Index", { cars });
